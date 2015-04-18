@@ -1,4 +1,4 @@
-﻿Shader "Custom/Red" {
+﻿Shader "Custom/Red_Shader" {
 	Properties {
 		_Color ("Color", Color) = (1,0,0,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
