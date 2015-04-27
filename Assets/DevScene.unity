@@ -99,7 +99,6 @@ GameObject:
   - 92: {fileID: 138917744}
   - 124: {fileID: 138917743}
   - 81: {fileID: 138917742}
-  - 114: {fileID: 138917747}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -172,22 +171,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1462495320}
   m_RootOrder: 0
---- !u!114 &138917747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 138917741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b32d5bfc2543fcc46958c51bd0227c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 2
-  sensitivityX: 15
-  sensitivityY: 15
-  minimumY: -60
-  maximumY: 60
 --- !u!1 &661361688
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,11 +495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32d5bfc2543fcc46958c51bd0227c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 1
-  sensitivityX: 15
-  sensitivityY: 15
-  minimumY: -60
-  maximumY: 60
+  movementSpeed: 10
+  mouseSensitivity: 5
+  jump: 5
+  upDownRange: 60
 --- !u!23 &1462495317
 MeshRenderer:
   m_ObjectHideFlags: 0
