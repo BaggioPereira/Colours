@@ -8,7 +8,8 @@ public class Swap : MonoBehaviour {
     bool redBool = false, greenBool = false, blueBool = false;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
         plane = GameObject.Find("Plane");
         sphere = GameObject.Find("Sphere");
         cube = GameObject.Find("Cube");
@@ -29,7 +30,8 @@ public class Swap : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             sphere.SetActive(false);

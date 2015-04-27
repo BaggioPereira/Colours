@@ -4,12 +4,14 @@ using System.Collections;
 public class Player : MonoBehaviour {
     GameObject player;
     CharacterController controller;
-    public float movementSpeed = 10.0f;
-    public float mouseSensitivity = 5.0f;
-    public float jump = 20.0f;
-    float verticalRotation = 0;
-    public float upDownRange = 60.0f;
-    float verticalVelocity = 0;
+    public float sensitivityX = 5.0f;
+    public float sensitivityY = 5.0f;
+    public float yRange = 60.0f;
+    float rotationY = 0.0f;
+    float verticalVelocity = 0.0f;
+    public float jump = 5.0f;
+    public float speed = 10.0f;
+    private Vector3 moveDirection = Vector3.zero;
 
 	// Use this for initialization
 	void Start () 
@@ -23,31 +25,24 @@ public class Player : MonoBehaviour {
 	void Update () 
     {
         //Rotation
-        float rotLeftRight = Input.GetAxis("Mouse X") * mouseSensitivity;
-        transform.Rotate(0, rotLeftRight, 0);
+        float rotationX = Input.GetAxis("Mouse X") * sensitivityX;
+        transform.Rotate(0, rotationX, 0);
 
-        verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-        verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
-        Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+        rotationY -= Input.GetAxis("Mouse Y") * sensitivityY;
+        rotationY = Mathf.Clamp(rotationY, -yRange, yRange);
+        Camera.main.transform.localRotation = Quaternion.Euler(rotationY, 0, 0);
 
-
-        // Movement
-
-        float forwardSpeed = Input.GetAxis("Vertical") * movementSpeed;
-        float sideSpeed = Input.GetAxis("Horizontal") * movementSpeed;
-
+        //Movement
         verticalVelocity += Physics.gravity.y * Time.deltaTime;
 
-        if (controller.isGrounded && Input.GetButton("Jump"))
+        if(controller.isGrounded && Input.GetButton("Jump"))
         {
             verticalVelocity = jump;
         }
 
-        Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
-
-        speed = transform.rotation * speed;
-
-
-        controller.Move(speed * Time.deltaTime);
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), verticalVelocity, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= 10.0f;
+        controller.Move(moveDirection * Time.deltaTime);
 	}
 }
