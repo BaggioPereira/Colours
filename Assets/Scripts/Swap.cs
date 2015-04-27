@@ -78,12 +78,12 @@ public class Swap : MonoBehaviour {
             plane.GetComponent<Renderer>().material = cyan;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            cube.SetActive(false);
-            sphere.SetActive(false);
-            cylinder.SetActive(false);
-            plane.GetComponent<Renderer>().material = white;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    cube.SetActive(false);
+        //    sphere.SetActive(false);
+        //    cylinder.SetActive(false);
+        //    plane.GetComponent<Renderer>().material = white;
+        //}
 	}
 }

@@ -4,14 +4,12 @@ using System.Collections;
 public class Player : MonoBehaviour {
     GameObject player;
     CharacterController controller;
-    public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
-    public RotationAxes axes = RotationAxes.MouseXAndY;
-    public float sensitivityX = 15f;
-    public float sensitivityY = 15f;
-    public float minimumY = -60f;
-    public float maximumY = 60f;
-    float rotationY = 0f;
-    private Vector3 moveDirection = Vector3.zero;
+    public float movementSpeed = 10.0f;
+    public float mouseSensitivity = 5.0f;
+    public float jump = 20.0f;
+    float verticalRotation = 0;
+    public float upDownRange = 60.0f;
+    float verticalVelocity = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -24,28 +22,32 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (axes == RotationAxes.MouseXAndY)
+        //Rotation
+        float rotLeftRight = Input.GetAxis("Mouse X") * mouseSensitivity;
+        transform.Rotate(0, rotLeftRight, 0);
+
+        verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+        verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
+        Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+
+
+        // Movement
+
+        float forwardSpeed = Input.GetAxis("Vertical") * movementSpeed;
+        float sideSpeed = Input.GetAxis("Horizontal") * movementSpeed;
+
+        verticalVelocity += Physics.gravity.y * Time.deltaTime;
+
+        if (controller.isGrounded && Input.GetButton("Jump"))
         {
-            float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-        }
-        else if (axes == RotationAxes.MouseX)
-        {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
-        }
-        else
-        {
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-            transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+            verticalVelocity = jump;
         }
 
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= 20.0f;
-        moveDirection.y = 0;
-        controller.Move(moveDirection * Time.deltaTime);
+        Vector3 speed = new Vector3(sideSpeed, verticalVelocity, forwardSpeed);
+
+        speed = transform.rotation * speed;
+
+
+        controller.Move(speed * Time.deltaTime);
 	}
 }
