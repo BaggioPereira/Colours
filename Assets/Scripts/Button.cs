@@ -4,6 +4,7 @@ using System.Collections;
 public class Button : MonoBehaviour {
     Animation anim;
     public bool pressed;
+    public int distance;
 	// Use this for initialization
 	void Start () 
     {
@@ -16,23 +17,35 @@ public class Button : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if(!pressed)
-            {
-                if (!anim.IsPlaying("Unpressed"))
-                {
-                    anim.Play("Pressed");
-                    new WaitForSeconds(anim["Pressed"].length);
-                    pressed = true;
-                }   
-            }
+            int x = Screen.width / 2;
+            int y = Screen.height / 2;
 
-            else
+            Ray ray = Camera.main.ScreenPointToRay(new Vector3(x, y));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, distance))
             {
-                if (!anim.IsPlaying("Pressed"))
-                {   
-                    anim.Play("Unpressed");
-                    new WaitForSeconds(anim["Unpressed"].length);
-                    pressed = false;
+                Press p = hit.collider.GetComponent<Press>();
+                if(p!=null)
+                {
+                    if(!pressed)
+                    {
+                        if (!anim.IsPlaying("Unpressed"))
+                        {
+                            anim.Play("Pressed");
+                            new WaitForSeconds(anim["Pressed"].length);
+                            pressed = true;
+                        }   
+                    }
+
+                    else
+                    {
+                        if (!anim.IsPlaying("Pressed"))
+                        {   
+                            anim.Play("Unpressed");
+                            new WaitForSeconds(anim["Unpressed"].length);
+                            pressed = false;
+                        }
+                    }
                 }
             }
         }       
