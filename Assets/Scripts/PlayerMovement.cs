@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
     GameObject player;
     CharacterController controller;
     public float sensitivityX = 5.0f;

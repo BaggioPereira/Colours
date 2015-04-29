@@ -2,7 +2,7 @@
 using UnityEditor;
 using System.Collections;
 
-public class Swap : MonoBehaviour {
+public class SwapScene : MonoBehaviour {
     Material red, green, blue, cyan, yellow, magenta, white;
     GameObject plane, sphere, cube, cylinder;
     bool redBool = false, greenBool = false, blueBool = false;
