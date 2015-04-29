@@ -3,89 +3,60 @@ using UnityEditor;
 using System.Collections;
 
 public class SwapScene : MonoBehaviour {
-    Material red, green, blue, cyan, yellow, magenta, white;
-    GameObject plane, sphere, cube, cylinder;
-    bool redBool = false, greenBool = false, blueBool = false;
+    Material red, blue;
+    GameObject[] objects;
+    public bool redBool = false, blueBool = true;
 
 	// Use this for initialization
 	void Start () 
     {
-        plane = GameObject.Find("Plane");
-        sphere = GameObject.Find("Sphere");
-        cube = GameObject.Find("Cube");
-        cylinder = GameObject.Find("Cylinder");
         red = (Material) Resources.Load("ShadersMaterials/Red");
-        green = (Material) Resources.Load("ShadersMaterials/Green");
         blue = (Material) Resources.Load("ShadersMaterials/Blue");
-        magenta = (Material)Resources.Load("ShadersMaterials/Magenta");
-        cyan = (Material)Resources.Load("ShadersMaterials/Cyan");
-        yellow = (Material)Resources.Load("ShadersMaterials/Yellow");
-        white = (Material)Resources.Load("ShadersMaterials/White");
-        if(!redBool && !greenBool && !blueBool)
+        objects = GameObject.FindGameObjectsWithTag("World");
+        Debug.Log(red.color);
+        Debug.Log(blue.color);
+        for(int i = 0; i<objects.Length;i++)
         {
-            sphere.SetActive(false);
-            cube.SetActive(false);
-            cylinder.SetActive(false);
+            Debug.Log(objects[i].GetComponent<Renderer>().material.color);
+
+            if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                objects[i].SetActive(true);
+
+            else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                objects[i].SetActive(false);
         }
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.Q))
         {
-            sphere.SetActive(false);
-            cylinder.SetActive(false);
-            cube.SetActive(true);
-            plane.GetComponent<Renderer>().material = blue;
-        }
+            redBool = !redBool;
+            blueBool = !blueBool;
+            if(redBool)
+            {
+                for (int i = 0; i < objects.Length; i++)
+                {
+                    if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                        objects[i].SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            cube.SetActive(false);
-            cylinder.SetActive(false);
-            sphere.SetActive(true);
-            plane.GetComponent<Renderer>().material = green;
-        }
+                    else if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                        objects[i].SetActive(false);
+                }
+            }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            sphere.SetActive(false);
-            cube.SetActive(false);
-            cylinder.SetActive(true);
-            plane.GetComponent<Renderer>().material = red;          
-        }
+            else if(blueBool)
+            {
+                for (int i = 0; i < objects.Length; i++)
+                {
+                    if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                        objects[i].SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            cube.SetActive(false);
-            sphere.SetActive(true);
-            cylinder.SetActive(true);
-            plane.GetComponent<Renderer>().material = yellow;         
+                    else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                        objects[i].SetActive(false);
+                }
+            }
         }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            cube.SetActive(true);
-            sphere.SetActive(false);
-            cylinder.SetActive(true);
-            plane.GetComponent<Renderer>().material = magenta;
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            cube.SetActive(true);
-            sphere.SetActive(true);
-            cylinder.SetActive(false);
-            plane.GetComponent<Renderer>().material = cyan;
-        }
-
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    cube.SetActive(false);
-        //    sphere.SetActive(false);
-        //    cylinder.SetActive(false);
-        //    plane.GetComponent<Renderer>().material = white;
-        //}
 	}
 }
