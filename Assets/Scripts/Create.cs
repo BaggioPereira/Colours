@@ -2,28 +2,35 @@
 using System.Collections;
 
 public class Create : MonoBehaviour {
-    public GameObject first, needactive;
-    public bool reappear;
+    public GameObject needactive;
+    public GameObject first;
+    public bool reappear1;
 	// Use this for initialization
 	void Start () 
     {
-        
+        if(first == null)
+        {
+            reappear1 = true;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if (first.GetComponent<ButtonPress>().pressed)
+        if(first!=null)
         {
-            reappear = true;
+            if (first.GetComponent<ButtonPress>().pressed)
+            {
+                reappear1 = true;
+            }
+
+            else
+            {
+                reappear1 = false;
+            }
         }
 
-        else
-        {
-            reappear = false;
-        }
-
-        if (reappear)
+        if (reappear1)
         {
             needactive.SetActive(true);
         }

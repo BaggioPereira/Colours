@@ -8,7 +8,7 @@ public class ButtonPress : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        anim = GetComponent<Animation>();
+        anim = gameObject.GetComponent<Animation>();
         pressed = false;
 	}
 	
@@ -24,8 +24,7 @@ public class ButtonPress : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, distance))
             {
-                Press p = hit.collider.GetComponent<Press>();
-                if(p!=null)
+                if(gameObject!=null)
                 {
                     if(!pressed)
                     {
