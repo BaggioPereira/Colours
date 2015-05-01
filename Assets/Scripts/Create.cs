@@ -1,46 +1,59 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Create : MonoBehaviour {
     public GameObject needactive;
-    public GameObject first;
-    public bool reappear1;
+    public GameObject[] button;
+    public bool[] reappear;
+    
 	// Use this for initialization
 	void Start () 
     {
-        if(first == null)
-        {
-            reappear1 = true;
-        }
+        reappear = new bool[button.Length];
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if(first!=null)
+        for(int i = 0; i < button.Length; i++)
         {
-            if (first.GetComponent<Pressable>().pressed)
+            if(button[i].GetComponent<Pressable>().pressed)
             {
-                reappear1 = true;
+                reappear[i] = true;
             }
 
             else
             {
-                reappear1 = false;
+                reappear[i] = false;
             }
         }
 
-        if (reappear1)
+        if(allTrue)
         {
             needactive.SetActive(true);
         }
 
         else
         {
-            needactive.transform.position =new Vector3(needactive.GetComponent<Pickupable>().x, needactive.GetComponent<Pickupable>().y, needactive.GetComponent<Pickupable>().z);
+            needactive.transform.position = new Vector3(needactive.GetComponent<Pickupable>().x, needactive.GetComponent<Pickupable>().y, needactive.GetComponent<Pickupable>().z);
             needactive.SetActive(false);
-            
-            
         }
-	}
+    }
+
+    //method to check if all booleans are true
+    bool allTrue
+    {
+        get
+        {
+            for (int i = 0; i < reappear.Length; i++)
+            {
+                if (!reappear[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 }
