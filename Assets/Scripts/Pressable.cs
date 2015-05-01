@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Press : MonoBehaviour {
-
+public class Pressable : MonoBehaviour {
+    public bool pressed;
 	// Use this for initialization
 	void Start () {
+        pressed = false;
 	
 	}
 	

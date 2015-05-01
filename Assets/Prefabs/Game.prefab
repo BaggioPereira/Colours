@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 444844}
   - 114: {fileID: 11415524}
-  - 114: {fileID: 11428130}
+  - 114: {fileID: 11422338}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136428ed94a5cf34fa8734c2f32b7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11428130
+--- !u!114 &11422338
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

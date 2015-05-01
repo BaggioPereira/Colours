@@ -19,7 +19,7 @@ public class Create : MonoBehaviour {
     {
         if(first!=null)
         {
-            if (first.GetComponent<ButtonPress>().pressed)
+            if (first.GetComponent<Pressable>().pressed)
             {
                 reappear1 = true;
             }
@@ -37,7 +37,10 @@ public class Create : MonoBehaviour {
 
         else
         {
+            needactive.transform.position =new Vector3(needactive.GetComponent<Pickupable>().x, needactive.GetComponent<Pickupable>().y, needactive.GetComponent<Pickupable>().z);
             needactive.SetActive(false);
+            
+            
         }
 	}
 }

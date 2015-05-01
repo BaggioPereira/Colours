@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 436114}
   - 65: {fileID: 6575614}
   - 111: {fileID: 11196532}
-  - 114: {fileID: 11445956}
+  - 114: {fileID: 11403460}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -180,7 +180,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11445956
+--- !u!114 &11403460
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -188,11 +188,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 172322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d3b676c84b6c3469a303fe1dfa229d, type: 3}
+  m_Script: {fileID: 11500000, guid: bd2e03a2d8871c04aa6ff06dbb3cca0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pressed: 0
-  distance: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
