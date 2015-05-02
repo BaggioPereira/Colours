@@ -30,6 +30,8 @@ public class Create : MonoBehaviour {
             }
         }
 
+        //if all buttons are pressed, make objects visible
+        //also checks if item is a platform or not
         if(allTrue)
         {
             for (int i = 0; i < needactive.Length; i++)
@@ -56,6 +58,8 @@ public class Create : MonoBehaviour {
             }    
         }
 
+        //if not all buttons are pressed, make objects invisible
+        //also checks if item is a platform or not
         else
         {
             for (int i = 0; i < needactive.Length; i++)

@@ -5,6 +5,7 @@ public class Pressable : MonoBehaviour {
     public bool pressed;
 	// Use this for initialization
 	void Start () {
+        //Sets initial state of button
         pressed = false;
 	
 	}
