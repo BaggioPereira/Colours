@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class Create : MonoBehaviour {
-    public GameObject needactive;
+    SwapScene scene;
+    public GameObject[] needactive;
     public GameObject[] button;
     public bool[] reappear;
     
 	// Use this for initialization
 	void Start () 
     {
+        scene = GetComponent<SwapScene>();
         reappear = new bool[button.Length];
 	}
 	
@@ -31,13 +32,48 @@ public class Create : MonoBehaviour {
 
         if(allTrue)
         {
-            needactive.SetActive(true);
+            for (int i = 0; i < needactive.Length; i++)
+            {
+                if (needactive[i].CompareTag("World"))
+                {
+                    if (scene.blueBool == true)
+                    {
+                        if(needactive[i].GetComponent<Renderer>().material.color == Color.blue)
+                            needactive[i].SetActive(true);
+                    }
+
+                    else if(scene.redBool == true)
+                    {
+                        if (needactive[i].GetComponent<Renderer>().material.color == Color.red)
+                            needactive[i].SetActive(true);
+                    }
+                }
+
+                else
+                {
+                    needactive[i].SetActive(true);
+                }
+            }    
         }
 
         else
         {
-            needactive.transform.position = new Vector3(needactive.GetComponent<Pickupable>().x, needactive.GetComponent<Pickupable>().y, needactive.GetComponent<Pickupable>().z);
-            needactive.SetActive(false);
+            for (int i = 0; i < needactive.Length; i++)
+            {
+                if (needactive[i].GetComponent<Pickupable>())
+                {
+                    needactive[i].transform.position = new Vector3(needactive[i].GetComponent<Pickupable>().x, needactive[i].GetComponent<Pickupable>().y, needactive[i].GetComponent<Pickupable>().z);
+                    needactive[i].SetActive(false);
+                }
+
+                else if (needactive[i].CompareTag("World"))
+                {
+                    if (scene.blueBool == true || scene.blueBool == false)
+                    {
+                        needactive[i].SetActive(false);
+                    }
+                }
+            } 
         }
     }
 

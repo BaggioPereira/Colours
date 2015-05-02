@@ -4,7 +4,8 @@ using System.Collections;
 public class SwapScene : MonoBehaviour {
     Material red, blue;
     GameObject[] objects;
-     bool redBool = false, blueBool = true;
+    [HideInInspector]
+    public bool redBool = false, blueBool = true;
 
 	// Use this for initialization
 	void Start () 

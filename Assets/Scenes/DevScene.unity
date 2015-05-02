@@ -122,10 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92dae48b13878544b1831092cb86ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needactive: {fileID: 209910607}
+  needactive:
+  - {fileID: 895018283}
+  - {fileID: 491499944}
+  - {fileID: 209910607}
   button:
   - {fileID: 839150618}
-  - {fileID: 2041497149}
   reappear: 
 --- !u!1001 &608836439
 Prefab:
@@ -471,18 +473,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &1142900487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1142900485}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1155725488
 Prefab:
   m_ObjectHideFlags: 0
@@ -782,7 +772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436114, guid: e3a89b117af827644befa2d9c23ed252, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 172322, guid: e3a89b117af827644befa2d9c23ed252, type: 2}
       propertyPath: m_TagString
@@ -1137,7 +1127,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
---- !u!1 &2041497149 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 172322, guid: e3a89b117af827644befa2d9c23ed252, type: 2}
-  m_PrefabInternal: {fileID: 1764378481}
