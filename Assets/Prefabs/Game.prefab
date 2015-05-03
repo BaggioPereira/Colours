@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136428ed94a5cf34fa8734c2f32b7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redBool: 0
+  blueBool: 1
 --- !u!114 &11422338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92dae48b13878544b1831092cb86ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needactive: {fileID: 0}
-  first: {fileID: 0}
-  reappear1: 0
+  needactive: []
+  button: []
+  reappear: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

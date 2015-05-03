@@ -87,49 +87,7 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &209910607 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 129392, guid: b98d23713e78e4a499ebdbb3409a181c, type: 2}
-  m_PrefabInternal: {fileID: 1155725488}
---- !u!1 &491499944 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 86015ede2d49d2247bdfd3047f41b187, type: 3}
-  m_PrefabInternal: {fileID: 1815083532}
---- !u!65 &491499945
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 491499944}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &537239472 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 128396, guid: 5121845c81588604db45579bd6ba3991, type: 2}
-  m_PrefabInternal: {fileID: 608836439}
---- !u!114 &537239474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 537239472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b92dae48b13878544b1831092cb86ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  needactive:
-  - {fileID: 895018283}
-  - {fileID: 491499944}
-  - {fileID: 209910607}
-  button:
-  - {fileID: 839150618}
-  reappear: 
---- !u!1001 &608836439
+--- !u!1001 &171427930
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -166,20 +124,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444844, guid: 5121845c81588604db45579bd6ba3991, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 11422338, guid: 5121845c81588604db45579bd6ba3991, type: 2}
-      propertyPath: first
-      value: 
-      objectReference: {fileID: 839150618}
-    - target: {fileID: 11422338, guid: 5121845c81588604db45579bd6ba3991, type: 2}
-      propertyPath: needactive
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11422338, guid: 5121845c81588604db45579bd6ba3991, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5121845c81588604db45579bd6ba3991, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &491499944 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 86015ede2d49d2247bdfd3047f41b187, type: 3}
+  m_PrefabInternal: {fileID: 1815083532}
+--- !u!65 &491499945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 491499944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &647052417 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 165672, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
@@ -263,10 +228,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &839150618 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 172322, guid: e3a89b117af827644befa2d9c23ed252, type: 2}
-  m_PrefabInternal: {fileID: 1671561214}
 --- !u!1001 &854379679
 Prefab:
   m_ObjectHideFlags: 0
@@ -510,7 +471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449844, guid: b98d23713e78e4a499ebdbb3409a181c, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b98d23713e78e4a499ebdbb3409a181c, type: 2}
@@ -772,7 +733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436114, guid: e3a89b117af827644befa2d9c23ed252, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 172322, guid: e3a89b117af827644befa2d9c23ed252, type: 2}
       propertyPath: m_TagString
@@ -1058,7 +1019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449844, guid: b98d23713e78e4a499ebdbb3409a181c, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 129392, guid: b98d23713e78e4a499ebdbb3409a181c, type: 2}
       propertyPath: m_Name
