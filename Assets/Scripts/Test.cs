@@ -39,5 +39,36 @@ public class Test : MonoBehaviour {
                 }
             }
         }
+
+        for(int i = 0; i<Array.Length; i++)
+        {
+            if (allTrue(i))
+            {
+                for(int j = 0; j < Array[i].objects.Length;j++)
+                {
+                    Array[i].objects[j].SetActive(true);
+                }
+            }
+            else
+            {
+                for (int j = 0; j < Array[i].objects.Length; j++)
+                {
+                    Array[i].objects[j].SetActive(false);
+                }
+            }
+        }
 	}
+
+    bool allTrue(int i)
+    {
+        for(int j = 0; j< Array[i].switchs.Length; j++)
+        {
+            if(!Array[i].switchs[j])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    
 }
