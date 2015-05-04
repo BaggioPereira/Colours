@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class LevelTrigger : MonoBehaviour {
-    public Object NextScene;
+    public string NextLevel;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +15,6 @@ public class LevelTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Application.LoadLevel(NextScene.name);
+        Application.LoadLevel(NextLevel);
     }
 }
