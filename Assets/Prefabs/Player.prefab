@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d3b676c84b6c3469a303fe1dfa229d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressed: 0
-  distance: 0
+  distance: 5
 --- !u!114 &11448176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32efd6088876ed438c17a0397a26c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 3
+  distance: 5
 --- !u!124 &12482770
 Behaviour:
   m_ObjectHideFlags: 1

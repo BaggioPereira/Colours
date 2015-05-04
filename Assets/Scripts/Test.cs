@@ -57,12 +57,12 @@ public class Test : MonoBehaviour {
                                 Array[i].objects[j].GetComponent<Associate>().associated = true;
                                 Array[i].objects[j].SetActive(true);
                             }
-                        }
+                        }  
+                    }
 
-                        else
-                        {
-                            Array[i].objects[j].SetActive(true);
-                        }
+                    else if(Array[i].objects[j])
+                    {
+                        Array[i].objects[j].SetActive(true);
                     }
                 } 
             }
@@ -71,19 +71,18 @@ public class Test : MonoBehaviour {
             {
                 for (int j = 0; j < Array[i].objects.Length; j++)
                 {
-                    if(Array[i].objects[j].GetComponent<Pickupable>())
-                    {
-                        Array[i].objects[j].transform.position = new Vector3(Array[i].objects[j].GetComponent<Pickupable>().x, Array[i].objects[j].GetComponent<Pickupable>().y, Array[i].objects[j].GetComponent<Pickupable>().z);
-                        Array[i].objects[j].SetActive(false);
-                    }
-
-                    else if(Array[i].objects[j].CompareTag("World"))
+                    if(Array[i].objects[j].CompareTag("World"))
                     {
                         if(scene.blueBool == true || scene.blueBool == false)
                         {
                             Array[i].objects[j].GetComponent<Associate>().associated = false;
                             Array[i].objects[j].SetActive(false);
                         }
+                    }
+
+                    else
+                    {
+                        Array[i].objects[j].SetActive(false);
                     }
                 }
             }

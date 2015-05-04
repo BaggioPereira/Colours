@@ -3,12 +3,11 @@ using System.Collections;
 
 public class ButtonPress : MonoBehaviour {
     Animation anim;
-    public bool pressed;
     public float distance = 3.0f;
 	// Use this for initialization
 	void Start () 
     {
-        pressed = false;
+
 	}
 	
 	// Update is called once per frame

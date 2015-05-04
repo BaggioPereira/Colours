@@ -74,7 +74,6 @@ public class Create : MonoBehaviour {
             {
                 if (needactive[i].GetComponent<Pickupable>())
                 {
-                    needactive[i].transform.position = new Vector3(needactive[i].GetComponent<Pickupable>().x, needactive[i].GetComponent<Pickupable>().y, needactive[i].GetComponent<Pickupable>().z);
                     needactive[i].SetActive(false);
                 }
 
