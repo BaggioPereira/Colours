@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Create : MonoBehaviour {
+public class Create : MonoBehaviour
+{
     SwapScene scene;
     public GameObject[] needactive;
     public GameObject[] button;
     public bool[] reappear;
-    
-	// Use this for initialization
-	void Start () 
+
+    // Use this for initialization
+    void Start()
     {
         scene = GetComponent<SwapScene>();
         reappear = new bool[button.Length];
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        for(int i = 0; i < button.Length; i++)
+        for (int i = 0; i < button.Length; i++)
         {
-            if(button[i].GetComponent<Pressable>().pressed)
+            if (button[i].GetComponent<Pressable>().pressed)
             {
                 reappear[i] = true;
             }
@@ -32,7 +33,7 @@ public class Create : MonoBehaviour {
 
         //if all buttons are pressed, make objects visible
         //also checks if item is a platform or not
-        if(allTrue)
+        if (allTrue)
         {
             for (int i = 0; i < needactive.Length; i++)
             {
@@ -40,11 +41,11 @@ public class Create : MonoBehaviour {
                 {
                     if (scene.blueBool == true)
                     {
-                        if(needactive[i].GetComponent<Renderer>().material.color == Color.blue)
+                        if (needactive[i].GetComponent<Renderer>().material.color == Color.blue)
                             needactive[i].SetActive(true);
                     }
 
-                    else if(scene.redBool == true)
+                    else if (scene.redBool == true)
                     {
                         if (needactive[i].GetComponent<Renderer>().material.color == Color.red)
                             needactive[i].SetActive(true);
@@ -55,7 +56,7 @@ public class Create : MonoBehaviour {
                 {
                     needactive[i].SetActive(true);
                 }
-            }    
+            }
         }
 
         //if not all buttons are pressed, make objects invisible
@@ -77,7 +78,7 @@ public class Create : MonoBehaviour {
                         needactive[i].SetActive(false);
                     }
                 }
-            } 
+            }
         }
     }
 
