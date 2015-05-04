@@ -14,7 +14,6 @@ public class PickUp : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        //check if object is picked up or not
         if(carrying)
         {
             carry(carriedObject);
@@ -27,14 +26,12 @@ public class PickUp : MonoBehaviour {
         }
 	}
 
-    //carry the block smoothly
     void carry(GameObject o)
     {
         o.transform.position = Vector3.Lerp(o.transform.position, Camera.main.transform.position + Camera.main.transform.forward * distance, Time.deltaTime * distance);
         o.transform.rotation = Quaternion.identity;
     }
 
-    //pickup the block if within range
     void pickUp()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -57,7 +54,6 @@ public class PickUp : MonoBehaviour {
         }
     }
 
-    //wait to see if key is pressed before dropping the block
     void checkDrop()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -66,7 +62,6 @@ public class PickUp : MonoBehaviour {
         }
     }
 
-    // drop the object
     void dropObject()
     {
         carrying = false;

@@ -21,7 +21,6 @@ public class ButtonPress : MonoBehaviour {
 
     void press()
     {
-        //if within range and pressed key, activate button
         if (Input.GetKeyDown(KeyCode.P))
         {
             int x = Screen.width / 2;
@@ -51,7 +50,6 @@ public class ButtonPress : MonoBehaviour {
 
     void checkUnpress()
     {
-        //if within range and pressed key, deactivate button
         if(Input.GetKeyDown(KeyCode.P))
         {
             unpressObject();
