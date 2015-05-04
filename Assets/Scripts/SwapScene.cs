@@ -47,6 +47,7 @@ public class SwapScene : MonoBehaviour {
             //red blocks are visible and blue are invisible
             if(redBool)
             {
+                
                 for (int i = 0; i < objects.Length; i++)
                 {
                     if(objects[i].GetComponent<Associate>().associated)
@@ -75,6 +76,11 @@ public class SwapScene : MonoBehaviour {
                     }         
                 }
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
 	}
 }
