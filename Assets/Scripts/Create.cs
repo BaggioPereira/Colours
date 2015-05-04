@@ -41,13 +41,21 @@ public class Create : MonoBehaviour {
                     if (scene.blueBool == true)
                     {
                         if(needactive[i].GetComponent<Renderer>().material.color == Color.blue)
+                        {
+                            needactive[i].GetComponent<Associate>().associated = true;
                             needactive[i].SetActive(true);
+                        }
+                            
                     }
 
                     else if(scene.redBool == true)
                     {
                         if (needactive[i].GetComponent<Renderer>().material.color == Color.red)
+                        {
+                            needactive[i].GetComponent<Associate>().associated = true;
                             needactive[i].SetActive(true);
+                        }
+                            
                     }
                 }
 
@@ -74,6 +82,7 @@ public class Create : MonoBehaviour {
                 {
                     if (scene.blueBool == true || scene.blueBool == false)
                     {
+                        needactive[i].SetActive(false);
                         needactive[i].SetActive(false);
                     }
                 }

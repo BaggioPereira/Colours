@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2351364}
   - 95: {fileID: 9547706}
   - 65: {fileID: 6572622}
+  - 114: {fileID: 11416398}
   m_Layer: 0
   m_Name: Platform
   m_TagString: World
@@ -91,6 +92,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11416398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d62e9f6da0a2b24ead6d9be5af70128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  associated: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

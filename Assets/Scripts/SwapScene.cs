@@ -20,11 +20,18 @@ public class SwapScene : MonoBehaviour {
         //Set initial active for all "objects" depending on color that is active
         for(int i = 0; i<objects.Length;i++)
         {
-            if (objects[i].GetComponent<Renderer>().material.color == blue.color)
-                objects[i].SetActive(true);
+            if(objects[i].GetComponent<Associate>().associated)
+            {
+                if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                    objects[i].SetActive(true);
 
-            else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                    objects[i].SetActive(false);
+            }      
+            else if(!objects[i].GetComponent<Associate>().associated)
+            {
                 objects[i].SetActive(false);
+            }
         }
 	}
 	
@@ -37,17 +44,19 @@ public class SwapScene : MonoBehaviour {
             //Swap scenes around
             redBool = !redBool;
             blueBool = !blueBool;
-
             //red blocks are visible and blue are invisible
             if(redBool)
             {
                 for (int i = 0; i < objects.Length; i++)
                 {
-                    if (objects[i].GetComponent<Renderer>().material.color == red.color)
-                        objects[i].SetActive(true);
+                    if(objects[i].GetComponent<Associate>().associated)
+                    {
+                        if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                            objects[i].SetActive(true);
 
-                    else if (objects[i].GetComponent<Renderer>().material.color == blue.color)
-                        objects[i].SetActive(false);
+                        else if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                            objects[i].SetActive(false);
+                    } 
                 }
             }
             
@@ -56,11 +65,14 @@ public class SwapScene : MonoBehaviour {
             {
                 for (int i = 0; i < objects.Length; i++)
                 {
-                    if (objects[i].GetComponent<Renderer>().material.color == blue.color)
-                        objects[i].SetActive(true);
+                    if(objects[i].GetComponent<Associate>().associated)
+                    {
+                        if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                            objects[i].SetActive(true);
 
-                    else if (objects[i].GetComponent<Renderer>().material.color == red.color)
-                        objects[i].SetActive(false);
+                        else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                            objects[i].SetActive(false);
+                    }         
                 }
             }
         }

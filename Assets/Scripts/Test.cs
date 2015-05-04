@@ -45,6 +45,7 @@ public class Test : MonoBehaviour {
                         {
                             if(Array[i].objects[j].GetComponent<Renderer>().material.color == Color.blue)
                             {
+                                Array[i].objects[j].GetComponent<Associate>().associated = true;
                                 Array[i].objects[j].SetActive(true);
                             }
                         }
@@ -53,6 +54,7 @@ public class Test : MonoBehaviour {
                         {
                             if (Array[i].objects[j].GetComponent<Renderer>().material.color == Color.red)
                             {
+                                Array[i].objects[j].GetComponent<Associate>().associated = true;
                                 Array[i].objects[j].SetActive(true);
                             }
                         }
@@ -79,6 +81,7 @@ public class Test : MonoBehaviour {
                     {
                         if(scene.blueBool == true || scene.blueBool == false)
                         {
+                            Array[i].objects[j].GetComponent<Associate>().associated = false;
                             Array[i].objects[j].SetActive(false);
                         }
                     }
