@@ -2,7 +2,7 @@
 using System.Collections;
 [System.Serializable]
 public class TwoDimensionalArray{
-    public GameObject[] switchs;
+    public GameObject[] switches;
     public GameObject[] objects;
     public bool[] active;   
 }
