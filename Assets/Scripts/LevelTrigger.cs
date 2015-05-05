@@ -17,6 +17,7 @@ public class LevelTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
         levelComplete.SetActive(true);
     }
 }
