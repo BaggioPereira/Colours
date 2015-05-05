@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11416398}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: World
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 93675d4b7a2dbd040a1c4f7613038553, type: 2}
+  - {fileID: 2100000, guid: b2297e31e16c65d4dbc6e045158303d2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d62e9f6da0a2b24ead6d9be5af70128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  associated: 0
+  associated: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

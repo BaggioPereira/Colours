@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Test : MonoBehaviour {
+public class MultiArray : MonoBehaviour {
     SwapScene scene;
     public TwoDimensionalArray[] Array;
 	// Use this for initialization

@@ -4,12 +4,12 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
     GameObject player;
     CharacterController controller;
-    public float sensitivityX = 5.0f;
-    public float sensitivityY = 5.0f;
+    public float sensitivityX = 10.0f;
+    public float sensitivityY = 10.0f;
     public float yRange = 60.0f;
     float rotationY = 0.0f;
     float verticalVelocity = 0.0f;
-    public float jump = 5.0f;
+    public float jump = 2.0f;
     public float speed = 10.0f;
     private Vector3 moveDirection = Vector3.zero;
 

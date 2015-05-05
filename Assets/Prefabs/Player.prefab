@@ -178,10 +178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32d5bfc2543fcc46958c51bd0227c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivityX: 15
-  sensitivityY: 15
+  sensitivityX: 10
+  sensitivityY: 10
   yRange: 60
-  jump: 2.5
+  jump: 2
   speed: 10
 --- !u!114 &11458132
 MonoBehaviour:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32efd6088876ed438c17a0397a26c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 5
+  distance: 3
 --- !u!124 &12482770
 Behaviour:
   m_ObjectHideFlags: 1
