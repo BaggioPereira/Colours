@@ -9,7 +9,6 @@ public class PressurePad : MonoBehaviour {
 	void Start () {
         padIsLoaded = false;
         anim = gameObject.GetComponent<Animation>();
-	
 	}
 	
 	// Update is called once per frame

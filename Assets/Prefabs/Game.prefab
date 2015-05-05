@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 444844}
   - 114: {fileID: 11415524}
   - 114: {fileID: 11491662}
+  - 114: {fileID: 11467014}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -116,6 +117,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redBool: 0
   blueBool: 1
+--- !u!114 &11467014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2eb35b2f1477949a101804730725bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelname: 
 --- !u!114 &11491662
 MonoBehaviour:
   m_ObjectHideFlags: 1

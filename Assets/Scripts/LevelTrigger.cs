@@ -2,19 +2,21 @@
 using System.Collections;
 
 public class LevelTrigger : MonoBehaviour {
-    public string NextLevel;
+    public GameObject levelComplete;
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+    {
+        levelComplete.SetActive(false);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 	
 	}
 
     void OnTriggerEnter(Collider other)
     {
-        Application.LoadLevel(NextLevel);
+        levelComplete.SetActive(true);
     }
 }

@@ -34,6 +34,7 @@ GameObject:
   - 114: {fileID: 11448176}
   - 114: {fileID: 11458132}
   - 114: {fileID: 11425874}
+  - 114: {fileID: 11460902}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -195,6 +196,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 3
+--- !u!114 &11460902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb27f371cd125445909aaaa418bdec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseGame: 0
+  pauseObject: {fileID: 0}
 --- !u!124 &12482770
 Behaviour:
   m_ObjectHideFlags: 1
