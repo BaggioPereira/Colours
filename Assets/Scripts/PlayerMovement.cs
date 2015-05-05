@@ -44,5 +44,10 @@ public class PlayerMovement : MonoBehaviour {
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= 10.0f;
         controller.Move(moveDirection * Time.deltaTime);
+
+        if(player.transform.position.y < 0)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
 	}
 }
