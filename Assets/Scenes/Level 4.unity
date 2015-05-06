@@ -790,7 +790,7 @@ Transform:
   - {fileID: 692234908}
   - {fileID: 719541305}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
 --- !u!1001 &606736168
 Prefab:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!1 &1085255328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1551,7 @@ Transform:
   - {fileID: 1543193284}
   - {fileID: 2098891542}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!4 &1240477097 stripped
 Transform:
   m_PrefabParentObject: {fileID: 449846, guid: 7518880b511ce9f4fbf12202b01fc82b, type: 2}
@@ -1937,12 +1937,40 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 110882, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446344, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1085255329}
+    - target: {fileID: 11446344, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420210, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1085255329}
+    - target: {fileID: 11420210, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432128, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1085255329}
+    - target: {fileID: 11432128, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1512709709 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 168162, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+  m_PrefabParentObject: {fileID: 105700, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
   m_PrefabInternal: {fileID: 1512709708}
 --- !u!4 &1543193284 stripped
 Transform:
@@ -2990,7 +3018,7 @@ Transform:
   - {fileID: 757110430}
   - {fileID: 305831172}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1001 &1990786768
 Prefab:
   m_ObjectHideFlags: 0

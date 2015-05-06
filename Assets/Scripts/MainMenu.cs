@@ -28,4 +28,9 @@ public class MainMenu : MonoBehaviour
     {
         Application.LoadLevel(levelname);
     }
+
+    public void Menu()
+    {
+        Application.LoadLevel("Main Menu");
+    }
 }

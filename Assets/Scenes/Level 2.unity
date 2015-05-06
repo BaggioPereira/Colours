@@ -379,7 +379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!4 &115310136 stripped
 Transform:
   m_PrefabParentObject: {fileID: 449846, guid: 7518880b511ce9f4fbf12202b01fc82b, type: 2}
@@ -1821,26 +1821,26 @@ Transform:
   m_LocalPosition: {x: -6.72927713, y: .371144861, z: -11.0953445}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 722137170}
   - {fileID: 1380165857}
+  - {fileID: 347099144}
   - {fileID: 297313326}
   - {fileID: 115310136}
+  - {fileID: 897589797}
   - {fileID: 1220776191}
-  - {fileID: 347099144}
+  - {fileID: 531588631}
   - {fileID: 1190126465}
   - {fileID: 1202358538}
-  - {fileID: 1967383366}
-  - {fileID: 162992731}
-  - {fileID: 831411917}
-  - {fileID: 531588631}
-  - {fileID: 722137170}
   - {fileID: 1796895605}
+  - {fileID: 1967383366}
   - {fileID: 2007704724}
-  - {fileID: 897589797}
+  - {fileID: 162992731}
   - {fileID: 1621368473}
+  - {fileID: 831411917}
   - {fileID: 1787745399}
   - {fileID: 1675056433}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1001 &949227163
 Prefab:
   m_ObjectHideFlags: 0
@@ -2024,6 +2024,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11411254, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22470228, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2112,12 +2116,76 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 11411254, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411254, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411254, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 740692461}
+    - target: {fileID: 11411254, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411254, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494714, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 740692461}
+    - target: {fileID: 11494714, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475762, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 740692461}
+    - target: {fileID: 11475762, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 110882, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446344, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 740692461}
+    - target: {fileID: 11446344, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420210, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 740692461}
+    - target: {fileID: 11420210, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432128, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 740692461}
+    - target: {fileID: 11432128, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &999661196 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 168162, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+  m_PrefabParentObject: {fileID: 105700, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
   m_PrefabInternal: {fileID: 999661195}
 --- !u!1001 &1018131360
 Prefab:
@@ -2665,22 +2733,22 @@ Transform:
   m_LocalPosition: {x: -6.72927713, y: .371144861, z: -11.0953445}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1271234894}
   - {fileID: 2089788761}
   - {fileID: 1362816338}
+  - {fileID: 1683015963}
   - {fileID: 782590109}
+  - {fileID: 1991700609}
   - {fileID: 1018131361}
+  - {fileID: 1972425695}
   - {fileID: 1941653109}
+  - {fileID: 308422885}
   - {fileID: 651441080}
   - {fileID: 1105869361}
   - {fileID: 1701956}
   - {fileID: 1944374211}
-  - {fileID: 295622899}
-  - {fileID: 1991700609}
-  - {fileID: 1972425695}
-  - {fileID: 1683015963}
-  - {fileID: 1271234894}
-  - {fileID: 308422885}
   - {fileID: 1571397402}
+  - {fileID: 295622899}
   m_Father: {fileID: 0}
   m_RootOrder: 11
 --- !u!4 &1392006645 stripped
