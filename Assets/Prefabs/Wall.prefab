@@ -14,7 +14,7 @@ GameObject:
   - 65: {fileID: 6570756}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Others
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9f4a67e6138c40a45997ba76be5a9d1c, type: 2}
+  - {fileID: 2100000, guid: e45c0ffbec6cb8e4a816b95507cb175b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

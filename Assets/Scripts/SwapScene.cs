@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class SwapScene : MonoBehaviour {
-    Material red, blue;
+    public Material red, blue, magentatoon, magenta, greentoon, green, whitetoon, white, yellowtoon, yellow;
     GameObject[] objects;
+    GameObject[] others;
     [HideInInspector]
     public bool redBool = false, blueBool = true;
 
@@ -11,21 +12,33 @@ public class SwapScene : MonoBehaviour {
 	void Start () 
     {
         //Set colours
-        red = (Material) Resources.Load("ShadersMaterials/Red");
-        blue = (Material) Resources.Load("ShadersMaterials/Blue");
+        red = (Material) Resources.Load("Materials/Red");
+        blue = (Material) Resources.Load("Materials/BlueToonLitOutline");
+        magentatoon = (Material)Resources.Load("Materials/MagentaToonLitOutline");
+        magenta = (Material)Resources.Load("Materials/Magenta");
+        greentoon = (Material)Resources.Load("Materials/GreenToonLitOutline");
+        green = (Material)Resources.Load("Materials/Green");
+        whitetoon = (Material)Resources.Load("Materials/WhiteToonLitOutline");
+        white = (Material)Resources.Load("Materials/White");
+        yellowtoon = (Material)Resources.Load("Materials/YellowToonLitOutline");
+        yellow = (Material)Resources.Load("Materials/Yellow");
+        Debug.Log(blue.shader.name);
 
         //Get number of platforms/objects that are affects by scenes
         objects = GameObject.FindGameObjectsWithTag("World");
+        others = GameObject.FindGameObjectsWithTag("Others");
+        Debug.Log(others.Length);
 
         //Set initial active for all "objects" depending on color that is active
         for(int i = 0; i<objects.Length;i++)
         {
+            Debug.Log(objects[i].GetComponent<Renderer>().material.shader.name);
             if(objects[i].GetComponent<Associate>().associated)
             {
-                if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                if (objects[i].GetComponent<Renderer>().material.shader == blue.shader)
                     objects[i].SetActive(true);
 
-                else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                else if (objects[i].GetComponent<Renderer>().material.shader == red.shader)
                     objects[i].SetActive(false);
             }      
             else if(!objects[i].GetComponent<Associate>().associated)
@@ -52,12 +65,27 @@ public class SwapScene : MonoBehaviour {
                 {
                     if(objects[i].GetComponent<Associate>().associated)
                     {
-                        if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                        if (objects[i].GetComponent<Renderer>().material.shader == red.shader)
                             objects[i].SetActive(true);
 
-                        else if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                        else if (objects[i].GetComponent<Renderer>().material.shader == blue.shader)
                             objects[i].SetActive(false);
                     } 
+                }
+
+                for(int i = 0; i<others.Length; i++)
+                {
+                    if (others[i].GetComponent<Renderer>().material.shader.name == magentatoon.shader.name)
+                        others[i].GetComponent<Renderer>().material = magenta;
+
+                    else if (others[i].GetComponent<Renderer>().material.shader.name == greentoon.shader.name)
+                        others[i].GetComponent<Renderer>().material = green;
+
+                    else if (others[i].GetComponent<Renderer>().material.shader.name == whitetoon.shader.name)
+                        others[i].GetComponent<Renderer>().material = white;
+
+                    else if (others[i].GetComponent<Renderer>().material.shader.name == yellowtoon.shader.name)
+                        others[i].GetComponent<Renderer>().material = yellow;
                 }
             }
             
@@ -68,12 +96,27 @@ public class SwapScene : MonoBehaviour {
                 {
                     if(objects[i].GetComponent<Associate>().associated)
                     {
-                        if (objects[i].GetComponent<Renderer>().material.color == blue.color)
+                        if (objects[i].GetComponent<Renderer>().material.shader == blue.shader)
                             objects[i].SetActive(true);
 
-                        else if (objects[i].GetComponent<Renderer>().material.color == red.color)
+                        else if (objects[i].GetComponent<Renderer>().material.shader == red.shader)
                             objects[i].SetActive(false);
                     }         
+                }
+
+                for (int i = 0; i < others.Length; i++)
+                {
+                    if (others[i].GetComponent<Renderer>().material.shader.name == magenta.shader.name)
+                        others[i].GetComponent<Renderer>().material = magentatoon;
+
+                    else if (others[i].GetComponent<Renderer>().material.shader.name == green.shader.name)
+                        others[i].GetComponent<Renderer>().material = greentoon;
+
+                    else if (others[i].GetComponent<Renderer>().material.shader.name == white.shader.name)
+                        others[i].GetComponent<Renderer>().material = whitetoon;
+
+                    else if (others[i].GetComponent<Renderer>().material.shader.name == yellow.shader.name)
+                        others[i].GetComponent<Renderer>().material = yellowtoon;
                 }
             }
         }

@@ -14,8 +14,8 @@ GameObject:
   - 65: {fileID: 6572622}
   - 114: {fileID: 11416398}
   m_Layer: 0
-  m_Name: Platform
-  m_TagString: Untagged
+  m_Name: All Platform
+  m_TagString: Others
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: b2297e31e16c65d4dbc6e045158303d2, type: 2}
+  - {fileID: 2100000, guid: b4d763a1f2b339748ae3681ef8acad38, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
