@@ -951,7 +951,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!4 &440648330 stripped
 Transform:
   m_PrefabParentObject: {fileID: 441472, guid: 8b9a5f840debf334b93311a8728a3687, type: 2}
@@ -1441,6 +1441,50 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 22491360, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405612, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 22419846, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 22491360, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405612, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 22419846, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 22491360, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405612, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 22419846, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405612, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -280
+      objectReference: {fileID: 0}
+    - target: {fileID: 22491360, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2d482dd8453e9f41b5ea9997c74ec17, type: 2}
   m_IsPrefabParent: 0
@@ -1491,7 +1535,7 @@ Transform:
   - {fileID: 800647939}
   - {fileID: 213284734}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1001 &789862142
 Prefab:
   m_ObjectHideFlags: 0
@@ -1600,7 +1644,7 @@ Transform:
   - {fileID: 1870940741}
   - {fileID: 340448075}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1001 &893473957
 Prefab:
   m_ObjectHideFlags: 0
@@ -1939,7 +1983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
 --- !u!1001 &1132070144
 Prefab:
   m_ObjectHideFlags: 0
@@ -2528,6 +2572,18 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 22406442, guid: 9d83fd647ead20745921a41c912bcd54, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -145
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406442, guid: 9d83fd647ead20745921a41c912bcd54, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406442, guid: 9d83fd647ead20745921a41c912bcd54, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d83fd647ead20745921a41c912bcd54, type: 2}
   m_IsPrefabParent: 0
@@ -2669,7 +2725,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!4 &1518602314 stripped
 Transform:
   m_PrefabParentObject: {fileID: 455840, guid: 1cfa7a4f83a864946b1ae29b238ea8c8, type: 2}
