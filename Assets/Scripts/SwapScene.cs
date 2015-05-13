@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SwapScene : MonoBehaviour {
-    public Material red, blue, magentatoon, magenta, greentoon, green, whitetoon, white, yellowtoon, yellow;
+    Material red, blue, magentatoon, magenta, greentoon, green, whitetoon, white, yellowtoon, yellow;
     GameObject[] objects;
     GameObject[] others;
     [HideInInspector]
@@ -22,17 +22,14 @@ public class SwapScene : MonoBehaviour {
         white = (Material)Resources.Load("Materials/White");
         yellowtoon = (Material)Resources.Load("Materials/YellowToonLitOutline");
         yellow = (Material)Resources.Load("Materials/Yellow");
-        Debug.Log(blue.shader.name);
 
         //Get number of platforms/objects that are affects by scenes
         objects = GameObject.FindGameObjectsWithTag("World");
         others = GameObject.FindGameObjectsWithTag("Others");
-        Debug.Log(others.Length);
 
         //Set initial active for all "objects" depending on color that is active
         for(int i = 0; i<objects.Length;i++)
         {
-            Debug.Log(objects[i].GetComponent<Renderer>().material.shader.name);
             if(objects[i].GetComponent<Associate>().associated)
             {
                 if (objects[i].GetComponent<Renderer>().material.shader == blue.shader)

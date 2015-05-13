@@ -255,6 +255,10 @@ Transform:
   - {fileID: 994640417}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!1 &355819179 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 194320, guid: afc78577630e2a74a9e06aa6c9724b50, type: 2}
+  m_PrefabInternal: {fileID: 938965169}
 --- !u!1001 &378513854
 Prefab:
   m_ObjectHideFlags: 0
@@ -298,6 +302,10 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 11411168, guid: 582f964ca58de824a9dca0f632c75c88, type: 2}
+      propertyPath: objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 355819179}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 582f964ca58de824a9dca0f632c75c88, type: 2}
   m_IsPrefabParent: 0
