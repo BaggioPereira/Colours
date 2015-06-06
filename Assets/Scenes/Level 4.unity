@@ -3261,6 +3261,26 @@ Prefab:
       propertyPath: pauseObject
       value: 
       objectReference: {fileID: 1512709709}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -15.6000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -24.5400009
+      objectReference: {fileID: 0}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.48000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424370, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: pauseObject
+      value: 
+      objectReference: {fileID: 1512709709}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
   m_IsPrefabParent: 0

@@ -2630,6 +2630,26 @@ Prefab:
       propertyPath: pauseObject
       value: 
       objectReference: {fileID: 736021071}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -42.2000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 441852, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.91100001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424370, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
+      propertyPath: pauseObject
+      value: 
+      objectReference: {fileID: 736021071}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f80dd72f21d0a064a8793e87adc26d8e, type: 2}
   m_IsPrefabParent: 0
@@ -2725,7 +2745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!4 &1518602314 stripped
 Transform:
   m_PrefabParentObject: {fileID: 455840, guid: 1cfa7a4f83a864946b1ae29b238ea8c8, type: 2}

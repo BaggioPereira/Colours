@@ -23,12 +23,8 @@ public class ButtonPress : MonoBehaviour {
         //if within range and pressed key, activate button
         if (Input.GetKeyDown(KeyCode.E))
         {
-            int x = Screen.width / 2;
-            int y = Screen.height / 2;
-
-            Ray ray = Camera.main.ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, distance))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
             {
                 Pressable p = hit.collider.GetComponent<Pressable>();
                 if (p != null)

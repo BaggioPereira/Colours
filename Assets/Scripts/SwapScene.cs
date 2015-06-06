@@ -5,6 +5,7 @@ public class SwapScene : MonoBehaviour {
     Material red, blue, magentatoon, magenta, greentoon, green, whitetoon, white, yellowtoon, yellow;
     GameObject[] objects;
     GameObject[] others;
+    GameObject[] heat;
     [HideInInspector]
     public bool redBool = false, blueBool = true;
 
@@ -26,6 +27,15 @@ public class SwapScene : MonoBehaviour {
         //Get number of platforms/objects that are affects by scenes
         objects = GameObject.FindGameObjectsWithTag("World");
         others = GameObject.FindGameObjectsWithTag("Others");
+        heat = GameObject.FindGameObjectsWithTag("Heat");
+
+        for (int i = 0; i < heat.Length; i++)
+        {
+            if (redBool)
+                heat[i].GetComponent<MeshRenderer>().enabled = true;
+            else
+                heat[i].GetComponent<MeshRenderer>().enabled = false;
+        }
 
         //Set initial active for all "objects" depending on color that is active
         for(int i = 0; i<objects.Length;i++)
@@ -57,7 +67,10 @@ public class SwapScene : MonoBehaviour {
             //red blocks are visible and blue are invisible
             if(redBool)
             {
-                
+                for (int i = 0; i < heat.Length; i++)
+                {
+                    heat[i].GetComponent<MeshRenderer>().enabled = true;
+                }
                 for (int i = 0; i < objects.Length; i++)
                 {
                     if(objects[i].GetComponent<Associate>().associated)
@@ -89,6 +102,10 @@ public class SwapScene : MonoBehaviour {
             //blue blocks are visible and red are invisible
             else if(blueBool)
             {
+                for (int i = 0; i < heat.Length; i++)
+                {
+                    heat[i].GetComponent<MeshRenderer>().enabled = false;
+                }
                 for (int i = 0; i < objects.Length; i++)
                 {
                     if(objects[i].GetComponent<Associate>().associated)
